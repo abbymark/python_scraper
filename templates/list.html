@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://andybrewer.github.io/mvp/mvp.css" rel="stylesheet"></link>
+</head>
+
+<body>
+  <header>
+    <h1><a href="/">Back</a></h1>
+   <h2>Search result for {{term}}</h2>
+    <a href="/export?term={{term}}">Export to csv</a>
+  </header>
+  <main>
+    {%for info in infos%}
+    <div>
+        <h3>{{info[0]}}</h3>
+        <h4>{{info[1]}}</h4>
+        <a href="{{info[2]}}" target="_blank">apply</a>
+      <hr />
+    </div>
+    {%endfor%}
+  </main>
+</body>
+
+</html>
